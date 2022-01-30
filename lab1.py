@@ -84,7 +84,7 @@ def main():
     xb = 1 / len(arr) * sum_of_elements
     print(f"xb = {xb}")
 
-    # 8. Середнє вибіркове
+    # 8. Вибіркова дисперсія
     db_sum = 0
     for z in occurrences:
         db_sum += (z - xb) ** 2 * occurrences[z]
