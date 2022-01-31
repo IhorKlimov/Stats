@@ -44,21 +44,14 @@ def main():
             elif z == left:
                 # Left edge
                 print("Left edge")
-                if i == 0:
-                    # Beginning of array, take all
-                    result += occurrences[z]
-                else:
-                    # Divide, take larger piece, if the number is odd
-                    result += occurrences[z] - int(occurrences[z] / 2)
+                # Take all
+                result += occurrences[z]
             elif z == right:
                 # Right edge
                 print("Right edge")
                 if i == (k - 1):
                     # End of array, take all
                     result += occurrences[z]
-                else:
-                    # Divide
-                    result += int(occurrences[z] / 2)
 
         interval_occurrences.append(result)
 
@@ -117,7 +110,7 @@ def main():
     print(f"s2 = {s2}")
 
     # 6. Розмах
-    r = discrete_zi[-1] - discrete_zi[0]
+    r = zi[-1] - zi[0]
     print(f"R = {r}")
 
     # 7. Коефіцієнт варіації
@@ -168,9 +161,10 @@ def main():
             sum_of_preceding_elements += interval_occurrences[n]
 
     me = median_interval[0] + h * (
-                (len(arr) / 2 - sum_of_preceding_elements) / interval_occurrences[median_interval_idx])
+            (len(arr) / 2 - sum_of_preceding_elements) / interval_occurrences[median_interval_idx])
 
     print(f"me = {me}")
+
 
 if __name__ == '__main__':
     main()
