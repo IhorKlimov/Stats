@@ -2,7 +2,6 @@ import math
 
 
 def task_one():
-    # Task 1.
     occurrences = {
         5: 3,
         11: 4,
