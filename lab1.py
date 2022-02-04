@@ -115,7 +115,8 @@ def main():
     print(f"mo = {mo}")
 
     # 13. Медіана
-    k = int(len(arr) / 2)
+    k = int(len(arr) / 2) - 1
+    print(f"k = {k}")
     if len(arr) % 2 == 0:
         me = (arr[k] + arr[k + 1]) / 2
     else:
