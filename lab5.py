@@ -87,6 +87,7 @@ def task_two():
     print(f"x^2crt = {x_2_crt}")
     print(f"Theory is correct = {x_2_obs < x_2_crt}")
 
+
 def main():
     task_one()
     task_two()
