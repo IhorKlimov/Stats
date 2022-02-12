@@ -332,7 +332,7 @@ def task_two():
 
     k = len(interval_occurrences) - 3
     print(f"k = {k}")
-    x_2_cr = 14.3  # Знайшов с таблиці x^2(0.025, 6)
+    x_2_cr = 14.4  # Знайшов с таблиці x^2(0.025, 6)
 
 
 def main():
