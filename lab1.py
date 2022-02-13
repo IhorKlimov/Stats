@@ -32,7 +32,7 @@ def main():
     data = [zi, ni]
     ax.axis('tight')
     ax.axis('off')
-    ax.table(cellText=data, loc="center", rowLabels=["zi", "ni"])
+    ax.table(cellText=data, loc="center", rowLabels=[r"$z_i$", r"$n_i$"])
     plt.show()
 
     # 2. Полігон
@@ -42,8 +42,8 @@ def main():
     ax.plot(1, 0, ">k", transform=ax.get_yaxis_transform(), clip_on=False)
     ax.plot(0, 1, "^k", transform=ax.get_xaxis_transform(), clip_on=False)
     ax.plot(zi, ni, marker='o')
-    plt.ylabel('ni')
-    plt.xlabel('zi')
+    plt.ylabel(r"$n_i$")
+    plt.xlabel(r"$z_i$")
     plt.xticks(zi)
     plt.yticks(ni)
     ax.vlines(zi, 0, ni, linestyle="dashed", linewidth=1.0)
@@ -69,7 +69,7 @@ def main():
     data = [zi, list(map(lambda x: r'$\dfrac{{{}}}{{{}}}$'.format(x, len(arr)), ni))]
     ax.axis('tight')
     ax.axis('off')
-    t = ax.table(cellText=data, loc="center", rowLabels=["zi", "vi"])
+    t = ax.table(cellText=data, loc="center", rowLabels=[r"$z_i$", "vi"])
     t.scale(1, 2)
     plt.show()
 
