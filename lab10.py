@@ -151,9 +151,10 @@ def task_one():
 
     k1 = (k - 1) * (n - 1)
     k2 = n * k * (m - 1)
-    fcr_common = 2.517670458
+    fcr_common = 2.517670458  # Знайшов з таблиці Фишера - Снедекора
     print(f"Fcrcommon({alpha}, {k1}, {k2}) = {fcr_common}")
     print(f"f_obs_total > fcr_common {f_obs_total > fcr_common}")
+
 
 if __name__ == '__main__':
     task_one()
