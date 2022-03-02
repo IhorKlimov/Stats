@@ -82,7 +82,7 @@ def main():
         sum_of_elements += z * occurrences[z]
 
     xb = 1 / len(arr) * sum_of_elements
-    print(f"xb = {xb}")
+    print(f"xb 1 / {len(arr)} * {sum_of_elements}  = {xb}")
 
     # 8. Вибіркова дисперсія
     db_sum = 0
@@ -90,19 +90,19 @@ def main():
         db_sum += (z - xb) ** 2 * occurrences[z]
 
     db = 1 / len(arr) * db_sum
-    print(f"Db = {db}")
+    print(f"Db 1 / {len(arr)} * {db_sum} = {db}")
 
     # 9. Виправлена вибіркова дисперсія
     s2 = len(arr) / (len(arr) - 1) * db
-    print(f"s2 = {s2}")
+    print(f"s2 {len(arr)} / ({len(arr)} - 1) * {db} = {s2}")
 
     # 10. Розмах
     r = zi[-1] - zi[0]
-    print(f"R = {r}")
+    print(f"R {zi[-1]} - {zi[0]} = {r}")
 
     # 11. Коефіцієнт варіації
     v = math.sqrt(db) / xb * 100
-    print(f"V = {v}%")
+    print(f"V {math.sqrt(db)} / {xb} * 100 = {v}%")
 
     # 12. Мода
     mo = None
