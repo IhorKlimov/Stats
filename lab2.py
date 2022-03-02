@@ -94,7 +94,7 @@ def main():
         sum_of_elements += discrete_zi[z] * interval_occurrences[z]
 
     xb = 1 / len(arr) * sum_of_elements
-    print(f"xb = {xb}")
+    print(f"xb = 1 / {len(arr)} * {sum_of_elements} = {xb}")
 
     # 4. Вибіркова дисперсія
     db_sum = 0
@@ -103,19 +103,19 @@ def main():
         print(idx, z)
 
     db = 1 / len(arr) * db_sum
-    print(f"Db = {db}")
+    print(f"Db = 1 / {len(arr)} * {db_sum} = {db}")
 
     # 5. Виправлена вибіркова дисперсія
     s2 = len(arr) / (len(arr) - 1) * db
-    print(f"s2 = {s2}")
+    print(f"s2 = {len(arr)} / ({len(arr)} - 1) * {db} = {s2}")
 
     # 6. Розмах
     r = zi[-1] - zi[0]
-    print(f"R = {r}")
+    print(f"R = {zi[-1]} - {zi[0]} = {r}")
 
     # 7. Коефіцієнт варіації
     v = math.sqrt(db) / xb * 100
-    print(f"V = {v}%")
+    print(f"V = {math.sqrt(db)} / {xb} * 100 = {v}%")
 
     # 8. Мода
     interval_max_occurrence = None
@@ -141,7 +141,7 @@ def main():
     print(nmo, modal_interval[0], nmo_minus_one, nmo_plus_one)
 
     mo = modal_interval[0] + h * ((nmo - nmo_minus_one) / (2 * nmo - nmo_minus_one - nmo_plus_one))
-    print(f"mo = {mo}")
+    print(f"mo = {modal_interval[0]} + {h} * (({nmo} - {nmo_minus_one}) / (2 * {nmo} - {nmo_minus_one} - {nmo_plus_one})) = {mo}")
 
     # 9. Медіана
     half = len(arr) / 2
@@ -163,7 +163,7 @@ def main():
     me = median_interval[0] + h * (
             (len(arr) / 2 - sum_of_preceding_elements) / interval_occurrences[median_interval_idx])
 
-    print(f"me = {me}")
+    print(f"me = {median_interval[0]} + {h} * (({len(arr)} / 2 - {sum_of_preceding_elements}) / {interval_occurrences[median_interval_idx]}) = {me}")
 
 
 if __name__ == '__main__':
