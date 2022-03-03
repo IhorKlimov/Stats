@@ -166,8 +166,8 @@ def task_two():
 
     vb = sum_of_y / total_num_of_elements
 
-    print(f"ub = {ub}")
-    print(f"vb = {vb}")
+    print(f"ub = {sum_of_x} / {total_num_of_elements} = {ub}")
+    print(f"vb = {sum_of_y} / {total_num_of_elements} = {vb}")
 
     sum_2_of_x = 0
     for idx, x in enumerate(converted_x):
@@ -181,14 +181,14 @@ def task_two():
 
     v_2_b = sum_2_of_y / total_num_of_elements
 
-    print(f"u^2b = {u_2_b}")
-    print(f"v^2b = {v_2_b}")
+    print(f"u^2b = {sum_2_of_x} / {total_num_of_elements} = {u_2_b}")
+    print(f"v^2b = {sum_2_of_y} / {total_num_of_elements} = {v_2_b}")
 
     sigma_u = math.sqrt(u_2_b - ub ** 2)
     sigma_v = math.sqrt(v_2_b - vb ** 2)
 
-    print(f"sigma u = {sigma_u}")
-    print(f"sigma v = {sigma_v}")
+    print(f"sigma u = math.sqrt({u_2_b} - {ub} ** 2) {sigma_u}")
+    print(f"sigma v = math.sqrt({v_2_b} - {vb} ** 2) = {sigma_v}")
 
     sum_x_y_n = 0
     for y_idx, row in enumerate(data):
@@ -198,7 +198,7 @@ def task_two():
     print(f"sum of x_y_n = {sum_x_y_n}")
 
     rb = (sum_x_y_n - total_num_of_elements * ub * vb) / (total_num_of_elements * sigma_u * sigma_v)
-    print(f"rb = {rb}")
+    print(f"rb = ({sum_x_y_n} - {total_num_of_elements} * {ub} * {vb}) / ({total_num_of_elements} * {sigma_u} * {sigma_v}) = {rb}")
 
     xb = ub * h1 + c1
     yb = vb * h2 + c2
@@ -207,7 +207,7 @@ def task_two():
 
     print(f"xb = {xb}")
     print(f"yb = {yb}")
-    print(f"sigma x = {sigma_x}")
+    print(f"sigma x = {sigmaf_x}")
     print(f"sigma y = {sigma_y}")
 
     print(f"y - {yb} = {rb} * {sigma_y} / {sigma_x} * (x - {xb})")
