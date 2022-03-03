@@ -18,16 +18,16 @@ def task_one():
     for z in occurrences:
         sum_of_elements += z * occurrences[z]
     xb = 1 / n * sum_of_elements
-    print(f"xb = {xb}")
+    print(f"xb = 1 / {n} * {sum_of_elements} = {xb}")
 
     db_sum = 0
     for z in occurrences:
         db_sum += (z - xb) ** 2 * occurrences[z]
     db = 1 / n * db_sum
-    print(f"Db = {db}")
+    print(f"Db = 1 / {n} * {db_sum} = {db}")
 
     s2 = n / (n - 1) * db
-    print(f"s2 = {s2}")
+    print(f"s2 = {n} / ({n} - 1) * {db} = {s2}")
 
     s = math.sqrt(s2)
     print(f"s = {s}")
@@ -35,6 +35,9 @@ def task_one():
     ty = 2.093  # Знайшов з таблиці значень ty, по y = 0.95, n = 20
     left = xb - (s * ty) / math.sqrt(n)
     right = xb + (s * ty) / math.sqrt(n)
+    print(f"left = {xb} - ({s} * {ty}) / {math.sqrt(n)} = {left}")
+    print(f"right = {xb} + ({s} * {ty}) / {math.sqrt(n)} = {right}")
+
     print(f"Task 1. {left} < a < {right}")
 
 
@@ -65,7 +68,7 @@ def task_two():
     for z in occurrences:
         sum_of_elements += z * occurrences[z]
     xb = 1 / n * sum_of_elements
-    print(f"xb = {xb}")
+    print(f"xb = 1 / {n} * {sum_of_elements} = {xb}")
 
     sigma = 8  # С Завдання
     y = 0.9545  # С Завдання
@@ -75,6 +78,9 @@ def task_two():
 
     left = xb - (sigma * t) / math.sqrt(n)
     right = xb + (sigma * t) / math.sqrt(n)
+
+    print(f"left = {xb} - ({sigma} * {t}) / {math.sqrt(n)} = {left}")
+    print(f"right = {xb} + ({sigma} * {t}) / {math.sqrt(n)} = {right}")
     print(f"Task 2. {left} < a < {right}")
 
 
@@ -99,16 +105,16 @@ def task_three():
     for z in occurrences:
         sum_of_elements += z * occurrences[z]
     xb = 1 / n * sum_of_elements
-    print(f"xb = {xb}")
+    print(f"xb = 1 / {n} * {sum_of_elements} = {xb}")
 
     db_sum = 0
     for z in occurrences:
         db_sum += (z - xb) ** 2 * occurrences[z]
     db = 1 / n * db_sum
-    print(f"Db = {db}")
+    print(f"Db = 1 / {n} * {db_sum} = {db}")
 
     s2 = n / (n - 1) * db
-    print(f"s2 = {s2}")
+    print(f"s2 = {n} / ({n} - 1) * {db} = {s2}")
 
     s = math.sqrt(s2)
     print(f"s = {s}")
@@ -116,9 +122,13 @@ def task_three():
     if q > 1:
         left = 0
         right = s * (1 + q)
+        print(f"left = {left}")
+        print(f"right = {s} * (1 + {q}) = {right}")
     else:
         left = s * (1 - q)
         right = s * (1 + q)
+        print(f"left = {s} * (1 - {q}) = {left}")
+        print(f"right = {s} * (1 + {q}) = {right}")
 
     print(f"Task 3. {left} < a < {right}")
 
